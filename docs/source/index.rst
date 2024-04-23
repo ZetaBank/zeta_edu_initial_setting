@@ -54,18 +54,8 @@ In Education Provided by ZetaBank:
    :width: 250
 
 .. toctree::
-    :caption: Zeta2 Robot Hardware
+    :caption: Zeta Arduino Board Setup
     :hidden:
 
-    courses/1.install_ros2_humble/1.robot_hardware_spec
+    courses/1.ATmega2560_setup/1.Bulk
 
-.. toctree::
-    :caption: Robot Hardware and ROS 2 Installation 
-    :hidden:
-    
-    courses/1.install_ros2_humble/2.robot_hardware_check
-    courses/1.install_ros2_humble/3.robot_making
-    courses/1.install_ros2_humble/1.robot_setup
-    courses/1.install_ros2_humble/2.pc_setup
-    courses/1.install_ros2_humble/3.install_ros2
-    courses/1.install_ros2_humble/4.robot_assemble_competition
