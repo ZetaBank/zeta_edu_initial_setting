@@ -13,11 +13,11 @@ Jetson Nano 세팅
 이미지 세팅
 ---------------------
 
--	Jetson Nano의 Image 파일을 다운
+1. Jetson Nano의 Image 파일을 다운
 https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write
 
 
-- Etcher 프로그램 다운 (Portable 추천)
+2. Etcher 프로그램 다운 (Portable 추천)
 .. image:: images/etcher.png
 https://etcher.balena.io/
 
