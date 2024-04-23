@@ -58,4 +58,6 @@ In Education Provided by ZetaBank:
     :hidden:
 
     courses/1.ATmega2560_setup/1.Bulk
+    courses/2.Jetson_nano/1.Jetson_nano_setting
+    courses/2.Jetson_nano/2.Board_setting
 
