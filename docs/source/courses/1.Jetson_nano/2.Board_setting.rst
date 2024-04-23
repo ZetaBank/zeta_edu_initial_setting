@@ -7,7 +7,7 @@ Board 세팅
 사전준비
 --------
 
-1. WiFi 모듈
+1. WiFi 모듈과 안테나
 
 2. Jetson-Nano Developer Board
 
@@ -17,12 +17,12 @@ Board 세팅
 
 
 
-1 Board 세팅
+Board 세팅
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Jetson-Nano Board를 세팅합니다.
 
-1.1 와이파이 모듈 연결
+1. 와이파이 모듈 연결
 ~~~~~~~~~~~
 
 와이파이 모듈을 연결합니다.
@@ -32,92 +32,100 @@ Jetson-Nano Board를 세팅합니다.
 
 
 
-1.2 로봇에서
+
+2. 보드 연결
 ~~~~~~~~~~~
 
-OS가 설치된 SD카드를 로봇의 위를 들어 올려서 라즈베리 파이에 장착합니다.
+- SD 카드
+- 전원선 (5V/4A)
+- HDMI
+- 키보드/마우스
+- 스피커
+- LAN 선
 
-초기 작업에선 로봇을 인터넷에 연결해야 하므로 인터넷선을 연결합니다.
+모두 연결합니다.
 
-로봇에 키보드와 마우스도 연결해 줍니다. 처음 실행은 `이 가이드 <https://linuxgenie.net/how-to-download-and-install-ubuntu-22-04/>`__ 를 참고합니다. 지역설정은 Seoul, 이름과 비밀번호는 본인이 원하는 것으로 합니다.
+* 주의: 점퍼를 연결해야 전원선으로 전원공급 가능해진다.
+.. image:: images/jumper.png
 
-
-이제 로봇에서 우분투를 사용할 준비가 끝났습니다.
-
-
-2 로봇 ``WiFi`` 설정하기
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-이번 과정에선 로봇을 무선환경에서 사용할 수 있게 ``WiFi`` 에 연결하는 방법을 알아보겠습니다.
-
-1. 로봇을 화면 오른쪽 위를 클릭하고 wifi 아이콘을 누릅니다
-
-.. image:: images/robot_wifi_1.png
-
-위의 사진은 이미 연결된 상태여서 저렇게 나오긴 합니다.
-
-2. Select Network를 눌러줍니다. 그럼 다음과 같은 화면이 중앙에 나올 것입니다.
-
-.. image:: images/robot_wifi_2.png
-
-3. 본인의 네트워크를 선택하고 Connect 버튼을 누르면 비밀번호 입력하는 화면이 나옵니다.
-
-.. image:: images/robot_wifi_3.png
-
-3. 로봇을 화면 오른쪽 위를 클릭하여 연결된 것을 확인할 수 있습니다.
-
-.. image:: images/robot_wifi_1.png
-
-2 로봇 ``openssh-server`` 설정하기
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-후에 PC와의 연결을 위해 ``openssh-server`` 를 설치합니다.
-
-.. code-block:: bash
-   
-   sudo apt update
-   sudo apt install openssh-server
-
-또한 로봇의 ``IP`` 를 알아야 ssh에 연결할 수 있습니다.
+화면이 나오면 세팅 시작합니다.
 
 
-.. code-block:: bash
-   
-   sudo apt update
-   sudo apt install net-tools
 
-net-tools를 설치하고  ifconfig를 입력하면 아래와 같이 나옵니다.
 
-.. code-block:: bash
+3. 보드 연결
+~~~~~~~~~~~
 
-   ifconfig
+- SD 카드
+- 전원선 (5V/4A)
+- HDMI
+- 키보드/마우스
+- 스피커
+- LAN 선
 
-   eth0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
-         ether e4:5f:01:f8:f6:61  txqueuelen 1000  (Ethernet)
-         RX packets 0  bytes 0 (0.0 B)
-         RX errors 0  dropped 0  overruns 0  frame 0
-         TX packets 0  bytes 0 (0.0 B)
-         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+모두 연결합니다.
 
-   lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-         inet 127.0.0.1  netmask 255.0.0.0
-         inet6 ::1  prefixlen 128  scopeid 0x10<host>
-         loop  txqueuelen 1000  (Local Loopback)
-         RX packets 269  bytes 24464 (24.4 KB)
-         RX errors 0  dropped 0  overruns 0  frame 0
-         TX packets 269  bytes 24464 (24.4 KB)
-         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+* 주의: 점퍼를 연결해야 전원선으로 전원공급 가능해진다.
+.. image:: images/jumper.png
 
-   wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-         inet `192.168.0.220`  netmask 255.255.255.0  broadcast 192.168.0.255
-         inet6 fe80::97fe:6f81:7ec:6148  prefixlen 64  scopeid 0x20<link>
-         ether e4:5f:01:f8:f6:62  txqueuelen 1000  (Ethernet)
-         RX packets 13417  bytes 18507752 (18.5 MB)
-         RX errors 0  dropped 0  overruns 0  frame 0
-         TX packets 3503  bytes 676415 (676.4 KB)
-         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+화면이 나오면 세팅 시작
 
-`wlan0` 의 `inet` 에 있는 이 주소가 ``IP`` 주소입니다. 즉 ``192.168.0.220`` 라고 확인 할 수 이씁니다.
+
+4. 보드 연결
+~~~~~~~~~~~
+
+- SD 카드
+- 전원선 (5V/4A)
+- HDMI
+- 키보드/마우스
+- 스피커
+- LAN 선
+
+모두 연결합니다.
+
+* 주의: 점퍼를 연결해야 전원선으로 전원공급 가능해진다.
+.. image:: images/jumper.png
+
+화면이 나오면 세팅 시작
+
+
+5. 보드 연결
+~~~~~~~~~~~
+
+- SD 카드
+- 전원선 (5V/4A)
+- HDMI
+- 키보드/마우스
+- 스피커
+- LAN 선
+
+모두 연결합니다.
+
+* 주의: 점퍼를 연결해야 전원선으로 전원공급 가능해진다.
+.. image:: images/jumper.png
+
+화면이 나오면 세팅 시작
+
+
+6. 보드 연결
+~~~~~~~~~~~
+
+- SD 카드
+- 전원선 (5V/4A)
+- HDMI
+- 키보드/마우스
+- 스피커
+- LAN 선
+
+모두 연결합니다.
+
+* 주의: 점퍼를 연결해야 전원선으로 전원공급 가능해진다.
+.. image:: images/jumper.png
+
+화면이 나오면 세팅 시작
+
+
+
 
 요약
 -------
