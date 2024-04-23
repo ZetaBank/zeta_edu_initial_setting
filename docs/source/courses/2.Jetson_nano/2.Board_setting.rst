@@ -15,132 +15,181 @@ Board 세팅
 
 4. 큰 드라이버, 작은 드라이버 각각 1개씩
 
+.. list-table::
+    :header-rows: 1
+
+    * - Product Picture
+      - Product Description
+    * - |part_1|
+      - | Jetson-Nano Developer Kit
+    * - |part_2|
+      - | WiFi 모듈과 안테나
+    * - |part_3|
+      - | 랜선, HDMI, 키보드, 마우스, 스피커, 전원 (5V/4A MAX)
+    * - |part_4|
+      - | 큰 드라이버, 작은드라이버
+      
+
+.. |part_1| image:: images/board_setting/jetson_kit.png
+.. |part_2| image:: images/board_setting/wifi_module.png
+.. |part_3| image:: images/board_setting/something.png
+.. |part_4| image:: images/board_setting/cross_driver.png
 
 
-Board 세팅
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Jetson-Nano Board를 세팅합니다.
 
-1. 와이파이 모듈 연결
+와이파이 모듈 연결
 ---------------------
 
 와이파이 모듈을 연결합니다.
-단, 와이파이 모듈의 선을 아래로 향하게 합니다.
+단, 와이파이 모듈의 **선**을 다음과 같이 향하게 합니다.
 
-.. image:: images/wifi_module.png
-
-
+.. image:: images/board_setting/wifi_line.png
 
 
-2. 보드 연결
+
+
+보드 연결
 ---------------------
 
 - SD 카드
+- wifi 안테나
 - 전원선 (5V/4A)
 - HDMI
 - 키보드/마우스
 - 스피커
 - LAN 선
 
-모두 연결합니다.
+**모두** 연결합니다.
+
+.. image:: images/board_setting/connected_board.png
+
 
 * 주의: 아래와 같이 점퍼를 연결해야 전원선으로 전원공급 가능해진다.
 
-.. image:: images/jumper.png
-
-화면이 나오면 세팅 시작합니다.
+.. image:: images/board_setting/jumper.png
 
 
 
-3. Wifi 세팅
+
+Wifi 세팅
 ---------------------
 
-모두 Continue를 선택하고 계정 설정시, 아래와 같이 입력합니다.
+1. 시스템 설정
+~~~~~~~~~~~~~~~~~~~~
 
-name: zeta
+.. image:: images/board_setting/english.png
 
-pw: 1
+모두 Continue를 선택하고 계정 설정시, 다음과 같이 입력합니다.
 
-Login Automatically 체크 
+* name: zeta
+* pw: 1
+* Login Automatically 체크 
 
-최대출력 MAXN
-
-
-3.1 Hotspot 설정
----------------------
-
-1. Search(Win키) 
-
-2. network 
-
-3. Use as Hotspot 
-
-.. image:: images/use_as_hotspot.png
-
-4. Turn On
-
-5. Edit Connection
-
-.. image:: images/edit_connection.png
-
-6. Hotspot 더블 클릭 
-
-7. Mode: Hotspot으로 변경 
-
-8. ssid 변경 (zeta_XXXX) 
-
-      - ethernet의 MAC address 끝 4자리 (ifconfig 명령어로 확인 가능)
-
-9. General 탭에서 Automatically connect 체크
-
-10. Save
-
-.. image:: images/save_edit_connection.png
-
-11. 다시 Hotspot 더블클릭
-
-12. Wi-Fi Security 탭 진입
-
-13. Security: WPA & WPA2 Personal
-
-14. PW: 12345678
-
-15. Save
-
-16. Connect to Hidden Wi-Fi Network 선택
-
-.. image:: images/connect_to_hidden.png
-
-17. Hotspot으로 설정한 뒤 Connect를 선택
-
-.. image:: images/done_connect_to_hidden.png
-
-18. Wi-Fi 세팅 완료
+.. image:: images/board_setting/create_account.png
 
 
 
+최대출력 MAXN (60891)
 
-4. ssh 원격접속
+
+2. Hotspot 설정
+~~~~~~~~~~~~~~~~~~~~
+
+Search(Win키) - network 선택한다.
+
+.. image:: images/board_setting/network.png
+
+Use as Hotspot 선택한다.
+
+.. image:: images/board_setting/use_as_hotspot.png
+
+Turn On을 누른다.
+
+.. image:: images/board_setting/turn_on.png
+
+Edit Connection을 클릭한다.
+
+.. image:: images/board_setting/edit_connection.png
+
+Hotspot 더블 클릭한다. 
+
+.. image:: images/board_setting/hotspot.png
+
+Mode를 Hotspot으로 변경한다.
+
+.. image:: images/board_setting/mode_hotspot.png
+
+ssid 변경한다. (zeta_XXXX)  - ethernet의 MAC address 끝 4자리 (ifconfig 명령어로 확인 가능)
+
+.. image:: images/board_setting/ssid_hotspot.png
+
+General 탭에서 Automatically connect 체크한다.
+
+.. image:: images/board_setting/general.png
+
+Save하고 다시 Hotspot 더블클릭
+
+.. image:: images/board_setting/again_hotspot.png
+
+Wi-Fi Security 탭 진입하고, ``WPA & WPA2 Personal`` 선택 후, 패스워드: **12345678** 설정
+
+.. image:: images/board_setting/Security.png
+
+마지막으로 Save하면 Hotspot이 활성화 된다. 따라서 우리는 지금까지 설정시킨 Hotspot을 사용해야한다.
+
+Connect to Hidden Wi-Fi Network 선택한다.
+
+.. image:: images/board_setting/connect_hidden.png
+
+Hotspot으로 설정한 뒤 Connect를 선택한다.
+
+.. image:: images/board_setting/done_connect.png
+
+그렇다면 최종적으로 Wi-Fi 세팅 완료된 것이다.
+
+
+
+
+ssh 원격접속
 -------------------
 
 
-1. Jetson-Nano의 ip주소 확인하고 ssh 원격접속 시작
+Jetson-Nano의 **ip주소** 확인하고 ssh 원격접속 시작한다.
 
-2. ZetaBank GitHub에 접속 후 안내에 따라 진행
+.. image:: images/board_setting/moba.png
 
-      - GitHub[zetabank-rm/docker]: https://github.com/zetabank-rm/docker/
+
+GitHub ``Access Token``을 발행한다.
+
+우측 위 계정 아이콘을 클릭하여 setting에 진입한다.
+
+.. image:: images/board_setting/github_setting.png
+
+왼쪽 제일 하단에 developer setting에 진입한다.
+
+.. image:: images/board_setting/developer_setting.png
+
+Generate New Tokens을 클릭하여 classic을 선택한다.
+
+.. image:: images/board_setting/generate_token.png
+
+만료일은 없이 설정한다. 앞으로도 사용하기 위함이다.
+
+.. image:: images/board_setting/no_expiration.png
+
+모든 scope를 선택하고, token을 생성한다. 생성된 token의 key를 잘 저장해두었다가 ``Docker clone``을 진행할 때 pw로 입력한다.
+
+.. image:: images/board_setting/final_token.png
+
+
+ZetaBank GitHub에 접속 후 안내에 따라 진행한다. (https://github.com/zetabank-rm/docker/)
 
       - 버전에 따라 branch를 선택 (ex. 개발 버전이면 ``bulk``)
 
       - ``usage`` 부분의 3번부터 진행
 
-      - GitHub Access Token을 발행
-
-            Settings - Developer settings - Personal access tokens - Tokens(classic) - Generate new token(classic) - Expiration을 ``No expiration``으로 설정 - Select scopes 모두 체크 - Generate token
-
-            <Access token은 ``Docker clone``을 진행할 때 pw로 입력>
-
+.. image:: images/board_setting/github.png
 
 
 요약
