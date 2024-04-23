@@ -1,7 +1,7 @@
 ATmega2560 (Bulk) 셋업 
 ======================
 
-**목표:** ATmega2560 보드에 개발 버전용 펌웨어를 설치한다.
+**목표** : ATmega2560 보드에 개발 버전용 펌웨어를 설치한다.
 
 
 준비물
@@ -31,7 +31,7 @@ ATmega2560 (Bulk) 셋업
 
 1. ATmega2560 보드에 충전 포트와 USB 포트를 연결한다.
 
-.. image:: images/ATmega2560_setup/ATmega2560_setup.jpg
+.. image:: images/ATmega2560_setup/ATmega2560_setting.jpg
 
 2. ATmega2560 보드의 전원을 킨다.
 
@@ -46,9 +46,9 @@ ATmega2560 (Bulk) 셋업
 
 .. image:: images/ATmega2560_setup/zetabank_devteam_github.png
 
-3-2. Repositories에서 **zeta_edu_core**와 **zeta_motor_driver**를 clone한다.
+3-2. Repositories에서 **zeta_edu_core** 와 **zeta_motor_driver** 를 clone한다.
 
-     Clone 위치는 ``문서/github/Arduino Board``와 같이 본인이 지정한다.
+     Clone 위치는 ``문서/github/Arduino Board`` 와 같이 본인이 지정한다.
 
 .. image:: images/ATmega2560_setup/zetabank_devteam_github_folder.png
 
@@ -56,25 +56,26 @@ ATmega2560 (Bulk) 셋업
 
      ros_lib 파일은 ``zeta_edu_core/zeta_edu_core/libraries/ros_lib`` 위치에 존재한다.
 
-.. image:: images/ATmega2560_setup/clone_ros_lib.png
-    :align: left
+.. list-table::
+    :header-rows: 1
 
-    Clone 파일의 ros_lib 파일
+    * - |part_1|
+      - |part_2|
+    * - | Clone 파일의 ros_lib 파일
+      - | Arduino 파일에 복사된 ros_lib 파일
 
-.. image:: images/ATmega2560_setup/arduino_ros_lib.png
-    :align: right
+.. |part_1| image:: images/ATmega2560_setup/clone_ros_lib.png
+.. |part_2| image:: images/ATmega2560_setup/arduino_ros_lib.png
 
-    Arduino 파일에 복사된 ros_lib 파일
-
-3-4. **Arduino IDE**를 다운받는다. (주소: https://www.arduino.cc/en/software)
+3-4. **Arduino IDE** 를 다운받는다. (주소: https://www.arduino.cc/en/software)
 
 .. image:: images/ATmega2560_setup/arduino_ide.png
 
-3-5. VSCode를 열어 확장에서 **Arduino**를 설치한다.
+3-5. VSCode를 열어 확장에서 **Arduino** 를 설치한다.
 
 .. image:: images/ATmega2560_setup/arduino_extension.png
 
-3-6. 펌웨어 파일을 **VSCode**에서 연다.
+3-6. 펌웨어 파일을 **VSCode** 에서 연다.
      
      zeta_edu_core와 zeta_motor_driver를 각각 **따로** 열어주는 것을 추천한다.
 
@@ -85,7 +86,7 @@ ATmega2560 (Bulk) 셋업
 펌웨어 설치 과정
 ~~~~~~~~~~~~~~~~~~~~~~
 
-4-1. 우측 하단의 'Show Board Config'를 클릭 후 'Arduino Board Configuration'에서 2560을 입력하여 **Arduino Mega or Mega 2560**을 선택한다.
+4-1. 우측 하단의 'Show Board Config'를 클릭 후 'Arduino Board Configuration'에서 2560을 입력하여 **Arduino Mega or Mega 2560** 을 선택한다.
 
 .. image:: images/ATmega2560_setup/arduino_board_configuration.png
 
@@ -93,21 +94,22 @@ ATmega2560 (Bulk) 셋업
 
      일반적으로 COM3 & 4 또는 COM7 & 8이 활성화된다.
      
-     zeta_edu_core는 **낮은 숫자**로, zeta_motor_driver는 **높은 숫자**로 설정한다. 
+     zeta_edu_core는 **낮은 숫자** 로, zeta_motor_driver는 **높은 숫자** 로 설정한다. 
 
-.. image:: images/ATmega2560_setup/zeta_edu_core_com3.png
-    :align: left
+.. list-table::
+    :header-rows: 1
 
-    zeta_edu_core의 port는 COM3
+    * - |part_1|
+      - |part_2|
+    * - | zeta_edu_core의 port는 COM3
+      - | zeta_motor_driver의 port는 COM4
 
-.. image:: images/ATmega2560_setup/zeta_motor_driver_com4.png
-    :align: right
+.. |part_1| image:: images/ATmega2560_setup/zeta_edu_core_com3.png
+.. |part_2| image:: images/ATmega2560_setup/zeta_motor_driver_com4.png
 
-    zeta_motor_driver의 port는 COM4
+4-3. **.ino 파일** 을 선택 후 **Arduino: Upload** 를 실행한다.
 
-4-3. **.ino 파일**을 선택 후 **Arduino: Upload**를 실행한다.
-
-    **[Done]**이라는 문구가 출력 터미널에 뜨면 문제없이 설치된 것이다.
+    **[Done]** 이라는 문구가 출력 터미널에 뜨면 문제없이 설치된 것이다.
 
 .. image:: images/ATmega2560_setup/zeta_edu_core_done.png
     :align: left
