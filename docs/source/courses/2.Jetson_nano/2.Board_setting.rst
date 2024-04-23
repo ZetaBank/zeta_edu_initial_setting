@@ -160,7 +160,7 @@ Jetson-Nano의 **ip주소** 확인하고 ssh 원격접속 시작한다.
 .. image:: images/board_setting/moba.png
 
 
-GitHub ``Access Token``을 발행한다.
+GitHub ``Access Token`` 을 발행한다.
 
 우측 위 계정 아이콘을 클릭하여 setting에 진입한다.
 
