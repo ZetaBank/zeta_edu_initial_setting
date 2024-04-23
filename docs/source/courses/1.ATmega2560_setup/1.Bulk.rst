@@ -60,8 +60,8 @@ ATmega2560 (Bulk) 셋업
     :header-rows: 1
 
     * - |part_4|
-      - |part_5|
-    * - | Clone 파일의 ros_lib 파일
+      - | Clone 파일의 ros_lib 파일
+    * - |part_5|
       - | Arduino 파일에 복사된 ros_lib 파일
 
 .. |part_4| image:: images/ATmega2560_setup/clone_ros_lib.png
@@ -111,12 +111,10 @@ ATmega2560 (Bulk) 셋업
 
     **[Done]** 이라는 문구가 출력 터미널에 뜨면 문제없이 설치된 것이다.
 
-.. image:: images/ATmega2560_setup/zeta_edu_core_done.png
-    :align: left
+.. list-table::
+    :header-rows: 1
 
-    zeta_edu_core upload done
-
-.. image:: images/ATmega2560_setup/zeta_motor_driver_done.png
-    :align: right
-
-    zeta_motor_drivere upload done
+    * - |part_8|
+      - |part_9|
+    * - | zeta_edu_core upload done
+      - | zeta_motor_drivere upload done
