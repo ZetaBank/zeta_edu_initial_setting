@@ -59,13 +59,13 @@ ATmega2560 (Bulk) 셋업
 .. list-table::
     :header-rows: 1
 
-    * - |part_1|
-      - |part_2|
+    * - |part_4|
+      - |part_5|
     * - | Clone 파일의 ros_lib 파일
       - | Arduino 파일에 복사된 ros_lib 파일
 
-.. |part_1| image:: images/ATmega2560_setup/clone_ros_lib.png
-.. |part_2| image:: images/ATmega2560_setup/arduino_ros_lib.png
+.. |part_4| image:: images/ATmega2560_setup/clone_ros_lib.png
+.. |part_5| image:: images/ATmega2560_setup/arduino_ros_lib.png
 
 3-4. **Arduino IDE** 를 다운받는다. (주소: https://www.arduino.cc/en/software)
 
@@ -99,13 +99,13 @@ ATmega2560 (Bulk) 셋업
 .. list-table::
     :header-rows: 1
 
-    * - |part_1|
-      - |part_2|
+    * - |part_6|
+      - |part_7|
     * - | zeta_edu_core의 port는 COM3
       - | zeta_motor_driver의 port는 COM4
 
-.. |part_1| image:: images/ATmega2560_setup/zeta_edu_core_com3.png
-.. |part_2| image:: images/ATmega2560_setup/zeta_motor_driver_com4.png
+.. |part_6| image:: images/ATmega2560_setup/zeta_edu_core_com3.png
+.. |part_7| image:: images/ATmega2560_setup/zeta_motor_driver_com4.png
 
 4-3. **.ino 파일** 을 선택 후 **Arduino: Upload** 를 실행한다.
 
