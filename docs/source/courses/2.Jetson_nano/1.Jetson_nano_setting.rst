@@ -18,7 +18,9 @@ https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write
 
 
 2. Etcher 프로그램 다운 (Portable 추천)
+
 .. image:: images/etcher.png
+
 https://etcher.balena.io/
 
 
@@ -36,6 +38,7 @@ SD 카드를 리더기에 꽂고 PC에 연결한 다음에 선택한다.
 
 4. Flash
 Flash 버튼을 클릭한다.
+
 .. image:: images/etcher_Flash.png
 
 5. Flash 완료
