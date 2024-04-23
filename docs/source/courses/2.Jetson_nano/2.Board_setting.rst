@@ -42,7 +42,7 @@ Board 세팅
 ---------------------
 
 와이파이 모듈을 연결합니다.
-단, 와이파이 모듈의 **선**을 다음과 같이 향하게 합니다.
+단, 와이파이 모듈의 **선** 을 다음과 같이 향하게 합니다.
 
 .. image:: images/board_setting/wifi_line.png
 
@@ -78,7 +78,7 @@ Wifi 세팅
 1. 시스템 설정
 ~~~~~~~~~~~~~~~~~~~~
 
-.. image:: images/board_setting/english.png
+.. image:: images/board_setting/language.png
 
 모두 Continue를 선택하고 계정 설정시, 다음과 같이 입력합니다.
 
@@ -134,7 +134,7 @@ Save하고 다시 Hotspot 더블클릭
 
 Wi-Fi Security 탭 진입하고, ``WPA & WPA2 Personal`` 선택 후, 패스워드: **12345678** 설정
 
-.. image:: images/board_setting/Security.png
+.. image:: images/board_setting/security.png
 
 마지막으로 Save하면 Hotspot이 활성화 된다. 따라서 우리는 지금까지 설정시킨 Hotspot을 사용해야한다.
 
