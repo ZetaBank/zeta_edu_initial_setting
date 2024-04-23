@@ -13,15 +13,18 @@ Jetson Nano 세팅
 이미지 세팅
 ---------------------
 
-1. Jetson Nano의 Image 파일을 다운
+1. Jetson Nano의 Image 파일을 다운로드
+
 https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write
 
 
 2. Etcher 프로그램 다운 (Portable 추천)
 
+https://etcher.balena.io/
+
 .. image:: images/etcher.png
 
-https://etcher.balena.io/
+
 
 
 이미지 Flash 
@@ -30,18 +33,22 @@ https://etcher.balena.io/
 1. Etcher 실행
 
 2. Select Image
+
 Jetson Nano Developer kit Image zip 파일을 압축을 해제하고, 파일 내부에 있는 이미지 파일을 선택한다.
 
 3. Select Device
+
 SD 카드를 리더기에 꽂고 PC에 연결한 다음에 선택한다.
 (주의: 갑작스럽게 다수의 파일 탐색기들이 뜰 수 있지만, 괜찮다.)
 
 4. Flash
+
 Flash 버튼을 클릭한다.
 
 .. image:: images/etcher_Flash.png
 
 5. Flash 완료
+
 이제 SD card에 리더기를 통해서 Jetson-Nano image 파일이 쓰여졌다.
 
 
