@@ -101,8 +101,10 @@ ATmega2560 (Bulk) 셋업
 
     * - |part_6|
       - |part_7|
-    * - | zeta_edu_core의 port는 COM3 (reset 버튼 위치는 전원 포트에서 두번 째 먼 곳에 위치함)
-      - | zeta_motor_driver의 port는 COM4 (reset 버튼 위치는 전원 포트에서 제일 먼 곳에 위치함)
+    * - | zeta_edu_core의 port는 COM3
+            (reset 버튼 위치는 전원 포트에서 두번 째 먼 곳에 위치함)
+      - | zeta_motor_driver의 port는 COM4
+            (reset 버튼 위치는 전원 포트에서 제일 먼 곳에 위치함)
 
 .. |part_6| image:: images/ATmega2560_setup/zeta_edu_core_com3.png
 .. |part_7| image:: images/ATmega2560_setup/zeta_motor_driver_com4.png
